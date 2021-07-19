@@ -1,0 +1,30 @@
+﻿@model WebApplication1.Models.Movie
+@{
+    ViewBag.Title = "Delete Movie";
+}
+<table class=" table table-bordered table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Year</th>
+        <th>Rating</th>
+    </tr>
+    
+ 
+    <tr>
+        <td>@Model.MovieID</td>
+        <td>@Model.Name</td>
+        <td>@Model.Year</td>
+        <td>@Model.Rating</td>
+
+        <td>
+            <a asp-controller="Home" asp-action="Delete" asp-route-id="@Model.MovieID" class="btn btn-danger">Delete</a>
+            <a asp-controller="Home" asp-action="Edit" asp-route-id="@Model.MovieID" class="btn btn-info">Edit</a>
+        </td> 
+        
+    </tr>
+
+    
+
+</table>
+</h3><a asp-controller="Home" asp-action="Index" class="btn btn-primary">Back to HomePage</a>

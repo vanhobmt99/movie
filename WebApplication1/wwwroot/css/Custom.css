@@ -1,0 +1,20 @@
+﻿body {
+    padding :10 em ;
+    font-family : Arial ,sans-serif ;
+
+}
+h1
+{
+    margin-top : 0 ;
+    color : navy;
+
+}
+label {
+    display: inline-block;
+    width: 10em;
+    
+}
+div
+{
+    margin-top : 0.5em ;
+}

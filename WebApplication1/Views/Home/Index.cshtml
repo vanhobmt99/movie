@@ -1,0 +1,38 @@
+﻿
+@model List<WebApplication1.Models.Movie>
+
+@{ 
+    ViewBag.Title = "My Movies";
+}
+<h2>Movie List</h2>
+<a asp-controller="Home" asp-action="Add"  class="btn btn-primary"> Add New Movie</a>
+
+<table class=" table table-bordered table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Year</th>
+        <th>Rating</th>
+        <th>Genre</th>
+        <th>Options</th>
+    </tr>
+    @foreach (var movie in Model)
+    {
+<tr>
+    <td>@movie.Name</td>
+    <td>@movie.Year</td>
+    <td>@movie.Rating</td>
+    <td>@movie.Genre.Name</td>
+    <td>
+        <a asp-controller="Home" asp-action="Edit" asp-route-id="@movie.MovieID " class=" btn btn-primary">Edit</a>
+        <a asp-controller="Home" asp-action="Delete" asp-route-id="@movie.MovieID" class="btn btn-danger">Delete</a>
+        <a asp-controller="Home" asp-action="Details" asp-route-id="@movie.MovieID" class="btn btn-info">Detail</a>
+
+    </td>
+
+</tr>
+        
+    }
+
+</table>
+
+
