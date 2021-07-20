@@ -8,17 +8,17 @@ namespace WebApplication1.Models
 {
     public class Movie
     {
-        public int  MovieID{get; set; }
-        [Required (ErrorMessage ="Please Enter Name of Movie")]
+        public int MovieID { get; set; }
+        [Required(ErrorMessage = "Please Enter Name of Movie")]
         public string Name { get; set; }
-        [Required(ErrorMessage ="Please enter a Year")]
-        [Range (1900,2099,ErrorMessage ="Must be invailid Year")]
-    public int ?  Year { get; set; }
-        [Required(ErrorMessage ="Please enter rating ")]
-        [Range(1,5,ErrorMessage ="Rating must be 1 to 5")]
+        [Required(ErrorMessage = "Please enter a Year")]
+        [Range(1900, 2099, ErrorMessage = "Must be invailid Year")]
+        public int? Year { get; set; }
+        [Required(ErrorMessage = "Please enter rating ")]
+        [Range(1, 5, ErrorMessage = "Rating must be 1 to 5")]
         public int? Rating { get; set; }
 
-        [Required (ErrorMessage ="Please Enter a genre.")]
+        [Required(ErrorMessage = "Please Enter a genre.")]
         public string GenreID { get; set; }
         public Genre Genre { get; set; }
     }
